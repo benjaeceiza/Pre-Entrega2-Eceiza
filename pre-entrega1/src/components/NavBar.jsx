@@ -1,9 +1,20 @@
-import CartWidget from "./CartWidget";
+
 import logo from "../assets/logo-img.png"
+import CarritoLogo from "../assets/carrito.png"
+
+const CartWidget = () =>{
+
+    return(
+        <>
+         <img src={CarritoLogo} alt="imagen de Carrito" />1
+        </>
+    )
+}
+
+
 
 const Navbar = () => {
 
-   
     return (
         <>
             <div className="ContenedorBarra">
