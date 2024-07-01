@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.ContenedorBarra{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: gray;
+}
+
+.Logo{
+    height: 200px;
+}
+
+.Lista{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.Enlace{
+    text-decoration: none;
+    margin: 0  20px;
+    color: black;
+}
