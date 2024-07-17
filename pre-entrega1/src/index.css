@@ -8,11 +8,13 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: gray;
+  
+    background-color: rgb(204, 203, 203);
+    
 }
 
 .Logo{
-    height: 200px;
+    height: 150px;
 }
 
 .Lista{
@@ -25,4 +27,52 @@
     text-decoration: none;
     margin: 0  20px;
     color: black;
+}
+
+/* ItemDetailContainer */
+
+
+.contenedor{
+    margin: 50px 0px;
+}
+
+.contenedor-talles{
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+ 
+}
+
+.talles{
+    text-align: center;
+    width: 50px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid gray 1px;
+    
+}
+
+.descripcion{
+    width: 50%;
+    margin:  50px auto ;
+    text-align: justify;
+}
+
+.contenedor-precio-boton{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+
+.precio-detail{
+    font-size: 20px;
+}
+
+.boton-carrito-detail{
+    padding: 5px 30px;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
 }

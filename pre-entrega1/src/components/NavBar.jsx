@@ -1,29 +1,20 @@
 
 import logo from "../assets/logo-img.png"
-import CarritoLogo from "../assets/carrito.png"
-
-const CartWidget = () =>{
-
-    return(
-        <>
-         <img src={CarritoLogo} alt="imagen de Carrito" />1
-        </>
-    )
-}
-
-
+import CartWidget from "./CartWidget";
+import { Link,NavLink } from "react-router-dom";
 
 const Navbar = () => {
 
     return (
         <>
             <div className="ContenedorBarra">
-                <img className="Logo" src={logo} alt="Logo" />
+                <NavLink to="/" ><img className="Logo" src={logo} alt="Logo" /></NavLink>
                 <ul className="Lista">
-                <a className="Enlace" href="#"><li className="Item">Opción 1</li></a>
-                <a className="Enlace" href="#"><li className="Item">Opción 2</li></a>
-                <a className="Enlace" href="#"><li className="Item">Opción 3</li></a>
-                <a className="Enlace" href="#"><li className="Item">{<CartWidget />}</li></a>
+                <NavLink  className="Enlace" to={"category/jordan1"}><li className="Item">Jordan 1</li></NavLink>
+                <NavLink  className="Enlace" to={"category/jordan4"}><li className="Item">Jordan 4</li></NavLink>
+                <NavLink  className="Enlace" to={"category/skateboarding"}><li className="Item">Skateboarding</li></NavLink>
+                <NavLink  className="Enlace" to={"category/airmax"}><li className="Item">Air Max</li></NavLink>
+                <NavLink  className="Enlace" to={"cart"}><li className="Item">{<CartWidget/>}</li></NavLink>
                 </ul>
             </div>
         </>
