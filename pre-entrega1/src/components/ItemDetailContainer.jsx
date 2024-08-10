@@ -1,56 +1,53 @@
 
-import { useEffect, useState } from "react";
-import arrayProductos from "../json/productos.json";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Talles from "./Talles";
+import ItemDetail from "./ItemDetail";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
+import Loading from "./Loading";
+import { CartContext } from "../contexto/CartContext";
+
+
+
+
+
 
 
 const ItemDetailConteiner = () => {
+ 
+   
+    const {id} = useParams();
+    const[item,setItem] = useState([]);
+    const [cargando,setCargando] = useState(true)
+    const {setCantidad} = useContext(CartContext);
+     
+    
+    useEffect(() =>{
+        
+       const db = getFirestore();
+       const docRef = doc(db,"productos",id);
 
-    const [detalle, setDetalle] = useState(arrayProductos)
-    const { id } = useParams();
+       getDoc(docRef).then(snapShot =>{
+         if(snapShot.exists()){
+          
+            setItem({id:snapShot.id,...snapShot.data()});
+            setCargando(false)
 
-    useEffect(() => {
-        if (id) {
-            setDetalle(arrayProductos.filter(producto => producto.id == id));
+         }else{
+            console.error("error")
+         }
 
+       })
+       
+       setCantidad(1);
+    },[id])
 
-
-        } else {
-            setDetalle(arrayProductos)
-        }
-
-    }, [id]);
-
-
-
+  
+ 
 
     return (
-        <div className="container my-5">
-            <div key={id} className="row">
-                {detalle.map(producto => (
-                    <div className="col-md-4 mt-5">
-                        <div className="card">
-                            <img src={producto.imagen} className="card-img-top" alt={producto.nombre} />
-                        </div>
-                    </div>
-                ))}
-                <div className="col">
-                {detalle.map(producto => (
-                    <div className="col text-center my-5">
-                        <h4>{producto.nombre}</h4>
-                        <Talles></Talles>
-                        <p className="descripcion">{producto.descrpcion}</p>
-                        <div className="contenedor-precio-boton">
-                        <p className="precio-detail">${producto.precio}</p>
-                         <button className="boton-carrito-detail">Agregar a Carrito</button>
-                        </div>
-
-                    </div>
-                ))}
-                </div>
-            </div>
-        </div>
+        <>
+           {cargando ? <Loading/>:<ItemDetail item={item}/>}
+        </>
     )
 }
 
