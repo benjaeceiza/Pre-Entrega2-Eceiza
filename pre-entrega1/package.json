@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run build",
+    "build": "vite - build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -16,7 +16,7 @@
     "react-toastify": "^10.0.5",
     "sweetalert2": "^11.12.4",
     "sweetalert2-react-content": "^5.0.7",
-    "build": "npm run build"
+    "build": "vite - build"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
