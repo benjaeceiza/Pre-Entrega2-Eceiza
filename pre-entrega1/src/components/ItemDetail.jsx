@@ -15,7 +15,7 @@ const ItemDetail = ({ item }) => {
             <div className="container my-5">
                 <div key={item.numero} className="row">
                     <div className="col">
-                        <img src={item.imagen} alt={item.nombre} />
+                        <img className="img-detail" src={item.imagen} alt={item.nombre} />
                     </div>
                     <div className="col text-center my-5">
                         <Description titulo={item.nombre} descripcion={item.descripcion} />

@@ -23,6 +23,27 @@
 }
 
 
+/* NAVBAR MOBILE */
+
+.nav-bar-mob{
+    display: none;
+   
+}
+
+.nav-link{
+ 
+    padding: 10px;
+    margin-top: 5px;
+} 
+
+
+/* item */
+
+
+
+
+
+
 /* LOADER */
 
 .cargando {
@@ -71,10 +92,8 @@
 
 }
 
-.container img{
-   
-   height: 500px;
-    
+.img-detail{
+    height: 500px;
 }
 
 
@@ -238,7 +257,7 @@
 }
 
 .contenedor-form{
-    margin: 200px 0px;
+    
     width: 600px;
     min-width: 200px;
 }
@@ -346,6 +365,31 @@
         font-family: 'nike';
     }
 }
+
+
+@media(max-width:705px){
+
+    .nav-bar-mob{
+        display: block;
+    }
+
+    .ContenedorBarra{
+        display: none;
+    }
+
+}
+
+@media(max-width:530px){
+
+    .img-detail{
+     
+      height: 90vw;
+    }
+
+}
+
+
+
 
 
 

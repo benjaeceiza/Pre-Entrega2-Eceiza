@@ -8,6 +8,7 @@ import FooterMob from './components/FooterMob'
 import CartContextProvider from './contexto/CartContext'
 import Carrito from './components/Carrito'
 import Checkout from './components/Checkout'
+import NavBarMob from './components/NavBarMob'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <CartContextProvider>
         <BrowserRouter>
           <Navbar />
+          <NavBarMob/>
           <Carrito />
           <Routes>
             <Route path={"/"} element={<ItemListContainer/>} />
