@@ -10,6 +10,7 @@ const Navbar = () => {
             <div className="ContenedorBarra">
                 <NavLink to={"/"} ><img className="Logo" src={logo} alt="Logo" /></NavLink>
                 <ul className="Lista">
+                    <NavLink className="Enlace" to={"/productos"}><li className="Item">PRODUCTOS</li></NavLink>
                     <NavLink className="Enlace" to={"/category/jordan1"}><li className="Item">JORDAN 1</li></NavLink>
                     <NavLink className="Enlace" to={"/category/jordan4"}><li className="Item">JORDAN 4</li></NavLink>
                     <NavLink className="Enlace" to={"/category/skateboarding"}><li className="Item">SKATEBOARDING</li></NavLink>

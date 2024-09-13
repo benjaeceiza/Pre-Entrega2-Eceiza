@@ -20,6 +20,7 @@ const NavBarMob = () => {
                         <CartWidget/>
                         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div className="navbar-nav">
+                                <NavLink to ={"/productos"} className="nav-link text-white Item" aria-current="page" href="#">PRODUCTOS</NavLink>
                                 <NavLink to ={"/category/jordan1"} className="nav-link text-white Item" aria-current="page" href="#">JORDAN 1</NavLink>
                                 <NavLink to ={"/category/jordan4"}  className="nav-link text-white Item" href="#">JORDAN 4</NavLink>
                                 <NavLink to ={"/category/skateboarding"}  className="nav-link text-white Item" href="#">SKATEBOARDING</NavLink>

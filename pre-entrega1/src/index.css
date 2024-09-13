@@ -5,6 +5,7 @@
 }
 
 
+
 /* NAVBAR */
 
 
@@ -25,16 +26,16 @@
 
 /* NAVBAR MOBILE */
 
-.nav-bar-mob{
+.nav-bar-mob {
     display: none;
-   
+
 }
 
-.nav-link{
- 
+.nav-link {
+
     padding: 10px;
     margin-top: 5px;
-} 
+}
 
 
 /* item */
@@ -81,6 +82,75 @@
     color: rgb(255, 255, 255);
 }
 
+/* INICIO */
+
+/* CARRUCEL */
+
+
+
+
+.fondo {
+
+    background-image: url(./assets/fondo-jordan2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+   
+}
+
+
+.carousel-inner {
+    width: 50vw;
+    margin: auto;
+}
+
+.fondo-btn{
+    background-color: rgba(0, 0, 0, 0.342);
+    z-index: 0;
+}
+
+.color1 {
+    background-color: gray;
+    transition: all 1s;
+}
+
+.color2 {
+    background-color: rgb(86,65,139);
+    transition: all 1s;
+}
+
+.color3 {
+    background-color: rgb(188,113,109);
+    transition: all 1s;
+}
+
+.color4 {
+    background-color: rgb(82,171,190);
+    transition: all 1s;
+}
+
+.color5 {
+    background-color: rgb(188,147,122);
+    transition: all 1s;
+}
+
+.color6 {
+    background-color: rgb(179,5,17);
+    transition: all 1s;
+}
+
+.color7 {
+    background-color: rgb(69,143,195);
+    transition: all 1s;
+}
+
+
+
+
+
+
+
+
 /* ItemDetailContainer */
 
 
@@ -92,7 +162,7 @@
 
 }
 
-.img-detail{
+.img-detail {
     height: 500px;
 }
 
@@ -134,18 +204,18 @@
 .contenedor-precio-boton {
     display: flex;
     align-items: center;
-   
+
     justify-content: center;
-    flex-wrap: wrap;   
+    flex-wrap: wrap;
 }
 
 
-.contenedor-precio-boton-2{
+.contenedor-precio-boton-2 {
 
     display: flex;
     align-items: center;
     justify-content: center;
-   
+
 }
 
 .precio-detail {
@@ -182,9 +252,9 @@
 /* CARRITO */
 
 
-.carrito-logo-numero{
+.carrito-logo-numero {
     display: flex;
-    
+
 }
 
 .carrito-logo-numero p {
@@ -248,28 +318,28 @@
 
 /* CHECKOUT */
 
-.contenedor-checkout{
+.contenedor-checkout {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 100px 0px;
-    
+
 }
 
-.contenedor-form{
-    
+.contenedor-form {
+
     width: 600px;
     min-width: 200px;
 }
 
-.contenedor-detalle-compra{
+.contenedor-detalle-compra {
     text-align: center;
     width: 800px;
     min-width: 200px;
- 
+
 }
 
-.contenedor-detalle-compra h1{
+.contenedor-detalle-compra h1 {
     margin: 50px;
 }
 
@@ -345,6 +415,7 @@
 }
 
 
+
 /* MEDIA QUERYS */
 
 @media(max-width:850px) {
@@ -364,26 +435,47 @@
     .subtitulo {
         font-family: 'nike';
     }
+
+
+
+    .fondo{
+        height: 50vh;
+        
+    }
+
+    .carousel-item{
+        margin-top: 10vh;
+    }
+    
+    .fondo-btn{
+        background-color: rgba(0, 0, 0, 0.178);
+    }
+
+    .carousel-inner{
+        width: 90%;
+    }
+
+     
 }
 
 
-@media(max-width:705px){
+@media(max-width:705px) {
 
-    .nav-bar-mob{
+    .nav-bar-mob {
         display: block;
     }
 
-    .ContenedorBarra{
+    .ContenedorBarra {
         display: none;
     }
 
 }
 
-@media(max-width:530px){
+@media(max-width:530px) {
 
-    .img-detail{
-     
-      height: 90vw;
+    .img-detail {
+
+        height: 90vw;
     }
 
 }

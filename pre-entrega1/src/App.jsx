@@ -9,6 +9,7 @@ import CartContextProvider from './contexto/CartContext'
 import Carrito from './components/Carrito'
 import Checkout from './components/Checkout'
 import NavBarMob from './components/NavBarMob'
+import Inicio from './components/Inicio'
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
           <NavBarMob/>
           <Carrito />
           <Routes>
-            <Route path={"/"} element={<ItemListContainer/>} />
+            <Route path={"/"} element={<Inicio/>} />
+            <Route path={"/productos"} element={<ItemListContainer/>}/>
             <Route path={"/category/:idcategoria"} element={<ItemListContainer/>}/>
             <Route path={"/item/:id"} element={<ItemDetailConteiner />}/>
             <Route path={"/cart"} element={<Checkout/>}/>
